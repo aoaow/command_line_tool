@@ -1,0 +1,2 @@
+[console_scripts]
+dbtool = dbtool.cli:cli

@@ -1,9 +1,9 @@
-"""
+'''
 Implement the command-line interface
 Steps:
     1. Initialize table by decorating under click.group()
     2. Wrap database command in a user-friendly way by click.command()
-"""
+'''
 
 import click
 from dbtool.database import (
@@ -38,19 +38,19 @@ def view():
         click.echo('No records found.')
 
 @cli.command()
-@click.option('--record_id', prompt='Record ID', help='The ID of the record to update.', type=int)
+@click.option('--id', prompt='Record ID', help='The ID of the record to update.', type=int)
 @click.option('--name', prompt='New Name', help='The new name of the record.')
 @click.option('--value', prompt='New Value', help='The new value of the record.')
-def update(record_id, name, value):
+def update(id, name, value):
     """Update an existing record."""
-    update_record(record_id, name, value)
+    update_record(id, name, value)
     click.echo('Record updated successfully.')
 
 @cli.command()
-@click.option('--record_id', prompt='Record ID', help='The ID of the record to delete.', type=int)
-def delete(record_id):
+@click.option('--id', prompt='Record ID', help='The ID of the record to delete.', type=int)
+def delete(id):
     """Delete a record from the database."""
-    delete_record(record_id)
+    delete_record(id)
     click.echo('Record deleted successfully.')
 
 if __name__ == '__main__':

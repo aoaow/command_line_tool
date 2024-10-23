@@ -1,6 +1,6 @@
-"""
+'''
 This file creates basic operations for an internal database using sqlite
-"""
+'''
 import sqlite3
 
 def connect_db(db_name='database.db'):

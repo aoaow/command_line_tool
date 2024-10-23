@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dbtool
+Version: 1.0.0
+Summary: A simple command-line tool to interact with a database.
+Home-page: https://github.com/aoaow/dbtool
+Author: Eleanor Jiang
+Author-email: eleanor.jiang@duke.edu
+License-File: LICENSE
+Requires-Dist: click==8.1.3
